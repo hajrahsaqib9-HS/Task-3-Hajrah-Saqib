@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>MoodBloom Dashboard</title>
+<link rel="stylesheet"
+href="./css/style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<div class="main-container">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="brand">
+            <h1>🌸 MoodBloom</h1>
+            <p>
+            Track Your Feelings,
+            Grow Your Happiness
+            </p>
+        </div>
+        <div class="header-right">
+            <button class="notify">
+                <i class="fa-regular fa-bell"></i>
+            </button>
+            <img
+            src="https://i.pravatar.cc/100"
+            class="profile-pic">
+            <button class="logout-btn"
+               onclick="logout()">
+               Logout
+            </button>
+        </div>
+    </header>
+    <!-- DASHBOARD CARD -->
+    <section class="dashboard-card">
+    <p class="welcome">
+        Hello,
+        <span id="userName">
+        User
+        </span>
+        👋
+    </p>
+        <h2 class="main-heading">
+            How are you
+            <span>
+                feeling
+            </span>
+            today?
+        </h2>
+        <!-- MOODS -->
+        <div class="mood-container">
+            <div class="mood-card active-mood">
+                😊
+                <span>
+                    Happy
+                </span>
+            </div>
+            <div class="mood-card">
+                😌
+                <span>
+                    Calm
+                </span>
+            </div>
+            <div class="mood-card">
+                😢
+                <span>
+                    Sad
+                </span>
+            </div>
+            <div class="mood-card">
+                😤
+                <span>
+                    Stressed
+                </span>
+            </div>
+            <div class="mood-card">
+                💪
+                <span>
+                    Motivated
+                </span>
+            </div>
+        </div>
+        <!-- QUICK ACTIONS -->
+        <div class="quick-actions">
+            <div class="action-card"
+            onclick="showJournal()">
+                📓
+                <h3>Journal</h3>
+                <p>
+                Write thoughts
+                </p>
+            </div>
+            <div class="action-card"
+            onclick="showMeditation()">
+                🧘
+                <h3>Meditation</h3>
+                <p>
+                Relax Mind
+                </p>
+            </div>
+            <div class="action-card"
+            onclick="showGoals()">
+                🎯
+                <h3>Goals</h3>
+                <p>
+                Track Goals
+                </p>
+            </div>
+            <div class="action-card"
+            onclick="showQuotes()">
+                💖
+                <h3>Quotes</h3>
+                <p>
+                Daily Boost
+                </p>
+            </div>
+        </div>
+            <a href="analytics.html" class="pink-btn">
+                View Analytics 📊
+            </a>
+        <div class="nav-buttons">
+            <a href="dashboard.html">🏠 Home</a>
+            <a href="analytics.html">📊 Analytics</a>
+            <a href="#" onclick="showJournal()">📓 Journal</a>
+            <a href="#" onclick="showGoals()">🎯 Goals</a>
+</div>
+        <!-- DYNAMIC CONTENT -->
+        <div id="contentArea">
+        </div>
+    </section>
+<footer>
+🌸 MoodBloom © 2026
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
